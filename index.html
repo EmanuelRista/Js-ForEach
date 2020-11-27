@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="listaFrutta"></p>
+    <p id="sommaNumeri"></p>
+
+    <script type="text/javascript">
+    // Crea un array frutta contenente: Mela, Arancia, Fragola.
+    // Usando il ciclo forEach fai si che su HTML venga visualizzato:
+    // Tipo di frutto indice: mela ecc... per ogni elemento
+
+    const frutta = ["Mela", "Arancia", "Fragola"];//supponiamo che l'array frutta contenga come elementi mela, arancia e fragola
+    frutta.forEach(displayFrutta);//per ogni elemento contenuto nell'array frutta, attiva la funzione displayFrutta
+
+    function displayFrutta(frutto, index) {//ogni elemento contenuto in frutta è un frutto // la funzione displayFrutta deve fare questo:
+      document.getElementById("listaFrutta").innerHTML += `Tipo di frutta ${index}: ${frutto}<br>`;//fammi vedere un elenco di frutta in questo formato: "Tipo di frutta indice: frutto"
+    }
+
+    //Fai la somma dei valori di un array contenente 65,44,12,4 utilizzando il foreach
+
+    var somma = 0; //supponiamo che la variabile somma sia 0
+    const numeri = [65, 44, 12, 4];//e che i numeri da sommare siano questi
+    numeri.forEach(faiLaSomma);//per ognuno di questo elemento attiva la funzione faiLaSomma
+
+    function faiLaSomma(numero, index) {//l'elemento dentro numeri si chiama numero //la funzione faiLaSomma deve fare questo:
+      somma += numero;//alla variabile somma, tramite addizione aggiungi ogni elemento contenuto in numeri (che singolarmente si chiama numero)
+      document.getElementById("sommaNumeri").innerHTML =`La somma dei numeri ${numeri} è ${somma}`;//fammi vedere tutto
+    }
+
+    </script>
+  </body>
+</html>
